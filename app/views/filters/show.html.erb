@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Airport:</b>
+  <%= @filter.airport_id %>
+</p>
+
+<p>
+  <b>Walkable:</b>
+  <%= @filter.walkable %>
+</p>
+
+<p>
+  <b>Public transport:</b>
+  <%= @filter.public_transport %>
+</p>
+
+<p>
+  <b>Urban:</b>
+  <%= @filter.urban %>
+</p>
+
+<p>
+  <b>Outdoor adventurer:</b>
+  <%= @filter.outdoor_adventurer %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @filter.code %>
+</p>
+
+
+<%= link_to 'Edit', edit_filter_path(@filter) %> |
+<%= link_to 'Back', filters_path %>

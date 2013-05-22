@@ -1,0 +1,41 @@
+<%= form_for(@filter) do |f| %>
+  <% if @filter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@filter.errors.count, "error") %> prohibited this filter from being saved:</h2>
+
+      <ul>
+      <% @filter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :airport_id %><br />
+    <%= f.number_field :airport_id %>
+  </div>
+  <div class="field">
+    <%= f.label :walkable %><br />
+    <%= f.check_box :walkable %>
+  </div>
+  <div class="field">
+    <%= f.label :public_transport %><br />
+    <%= f.check_box :public_transport %>
+  </div>
+  <div class="field">
+    <%= f.label :urban %><br />
+    <%= f.check_box :urban %>
+  </div>
+  <div class="field">
+    <%= f.label :outdoor_adventurer %><br />
+    <%= f.check_box :outdoor_adventurer %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

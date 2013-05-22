@@ -1,0 +1,33 @@
+<h1>Listing filters</h1>
+
+<table>
+  <tr>
+    <th>Airport</th>
+    <th>Walkable</th>
+    <th>Public transport</th>
+    <th>Urban</th>
+    <th>Outdoor adventurer</th>
+    <th>Code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @filters.each do |filter| %>
+  <tr>
+    <td><%= filter.airport_id %></td>
+    <td><%= filter.walkable %></td>
+    <td><%= filter.public_transport %></td>
+    <td><%= filter.urban %></td>
+    <td><%= filter.outdoor_adventurer %></td>
+    <td><%= filter.code %></td>
+    <td><%= link_to 'Show', filter %></td>
+    <td><%= link_to 'Edit', edit_filter_path(filter) %></td>
+    <td><%= link_to 'Destroy', filter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Filter', new_filter_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  airport_id: 1
+  walkable: false
+  public_transport: false
+  urban: false
+  outdoor_adventurer: false
+  code: MyString
+
+two:
+  airport_id: 1
+  walkable: false
+  public_transport: false
+  urban: false
+  outdoor_adventurer: false
+  code: MyString
